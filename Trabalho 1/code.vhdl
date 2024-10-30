@@ -1,6 +1,5 @@
  library ieee ; −− Importando a biblioteca ieee
- use ieee . std
- l ogic 1164 . all ;
+ use ieee.std logic1164.all ;
  −− −−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
  entity projeto1 is −− entidade do projeto
  port (
