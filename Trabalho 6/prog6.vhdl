@@ -1,23 +1,25 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use work.maxmin_pkg.all;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use work.maxmin_pkg.ALL;
 
 entity prog6 is
     generic (
-        imputs : integer := 4;
-        bits : integer := 8
+        Bits : positive := 4; -- Default bit size
+        Imputs : positive := 4 -- Default number of values
     );
     port (
-        entrada1, entrada2, entrada3, entrada4 : in unsigned(bits - 1 downto 0);
-        min_val, max_val : out unsigned(bits - 1 downto 0)
+        entrada1, entrada2, entrada3, entrada4 : in unsigned(Bits - 1 downto 0);
+        min_value, max_value : out unsigned(Bits - 1 downto 0)
     );
 end entity prog6;
 
 architecture prog6 of prog6 is
-    signal x : unsigned_array(0 to  imputs - 1)(bits - 1 downto 0);
+    signal values : unsigned_vector(0 to Imputs - 1);
 begin
-    x <= (entrada1, entrada2, entrada3, entrada4);
-    find_min_max(x, min_val, max_val);
-
+    values <= (entrada1, entrada2, entrada3, entrada4);
+    process (values)
+    begin
+        encontrar_min_max(values, Imputs, min_value, max_value);
+    end process;
 end architecture prog6;

@@ -1,37 +1,38 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 package maxmin_pkg is
-    type unsigned_array is array (0 to num_inputs - 1) of unsigned(num_bits - 1 downto 0);
+    subtype constrained_unsigned_vector is unsigned(3 downto 0); -- Assuming 4-bit unsigned type for demonstration
 
-    procedure find_min_max (
-        signal data : in unsigned_array;
-        signal min_val : out unsigned(num_bits - 1 downto 0);
-        signal max_val : out unsigned(num_bits - 1 downto 0)
+    type unsigned_vector is array (natural range <>) of constrained_unsigned_vector;
+
+    procedure encontrar_min_max(
+        values : in unsigned_vector;
+        Imputs : in positive;
+        signal min_value, max_value : out constrained_unsigned_vector
     );
 end package maxmin_pkg;
 
 package body maxmin_pkg is
-    procedure find_min_max (
-        signal data : in unsigned_array;
-        signal min_val : out unsigned(num_bits - 1 downto 0);
-        signal max_val : out unsigned(num_bits - 1 downto 0)
+    procedure encontrar_min_max(
+        values : in unsigned_vector;
+        Imputs : in positive;
+        signal min_value, max_value : out constrained_unsigned_vector
     ) is
-    variable min, max : unsigned(bits - 1 downto 0);
-
+        variable temp_min, temp_max : constrained_unsigned_vector;
     begin
-        min <= data(0);
-        max <= data(0);
-        for i in 0 to num_inputs - 1 loop
-            if data(i) < min then
-                min <= data(i);
+        temp_min := values(0);
+        temp_max := values(0);
+        for i in 0 to Imputs - 1 loop
+            if values(i) < temp_min then
+                temp_min := values(i);
             end if;
-            if data(i) > max then
-                max <= data(i);
+            if values(i) > temp_max then
+                temp_max := values(i);
             end if;
         end loop;
-        min_val <= min;
-        max_val <= max;
-    end procedure find_min_max;
+        min_value <= temp_min;
+        max_value <= temp_max;
+    end procedure;
 end package body maxmin_pkg;
