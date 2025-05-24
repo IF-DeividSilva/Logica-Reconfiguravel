@@ -79,7 +79,7 @@ O projeto desenvolvido implementa com sucesso uma calculadora em VHDL, utilizand
 ##  Estrutura do Repositório (Exemplo)
 **Explicação da Estrutura:**
 
-* **`Trabalho Final/`**: Este seria o diretório raiz do seu projeto (ou o nome da pasta que você está descrevendo).
+* **`Trabalho Final/`**: Diretório raiz do  projeto.
 * **`├── Img/`**: A pasta para armazenar as imagens (`placa1.png`, `placa2.png`, etc.) usadas no README.
 * **`├── Bin7seg.vhdl`**: Código VHDL responsável por decodificar os sinais para o display de 7 segmentos.
 * **`├── progF.vhdl`**: O arquivo VHDL principal do projeto, onde a lógica central da calculadora está implementada.
