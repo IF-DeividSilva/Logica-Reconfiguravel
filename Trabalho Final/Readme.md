@@ -12,6 +12,10 @@ O objetivo principal foi criar uma calculadora funcional que permite ao usuário
 
 ---
 
+##  Equipamentos Utilizados no Projeto
+* Placa FPGA DE10-Lite (MAX 10 10M50DAF484C7G)
+## Software Utilizado no Projeto
+* Quartus Prime v19
 ##  Funcionalidades
 
 * **Seleção de Operandos:** Números de entrada selecionados via switches.
