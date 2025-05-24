@@ -12,7 +12,7 @@ O objetivo principal foi criar uma calculadora funcional que permite ao usuário
 
 ---
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 * **Seleção de Operandos:** Números de entrada selecionados via switches.
 * **Seleção de Operação:** Operações aritméticas (adição, subtração, multiplicação, divisão) selecionadas via switches.
@@ -22,7 +22,7 @@ O objetivo principal foi criar uma calculadora funcional que permite ao usuário
 
 ---
 
-## 🛠️ Hardware e Software
+##  Hardware e Software
 
 * **Linguagem de Descrição de Hardware:** VHDL
 * **Hardware Alvo:** Placa FPGA com display de 7 segmentos, switches e botões.
@@ -30,34 +30,34 @@ O objetivo principal foi criar uma calculadora funcional que permite ao usuário
 
 ---
 
-## ⚙️ Funcionamento
+##  Funcionamento
 
 A calculadora opera recebendo duas entradas numéricas e uma seleção de operação através de switches. Ao pressionar o botão de confirmação, o circuito lógico implementado em VHDL realiza o cálculo correspondente. O resultado é então processado e enviado para os displays de 7 segmentos para visualização pelo usuário.
 
 ---
 
-## 🧪 Testes e Resultados
+##  Testes e Resultados
 
 O código VHDL foi compilado e programado na placa FPGA para a realização de testes e verificação do seu funcionamento. Os resultados obtidos foram satisfatórios, conforme detalhado abaixo:
 
 * **Adição:** Teste realizado com `8 + 3`. Resultado exibido: `11`.
-    * *(Sugestão: Você pode adicionar aqui a "Figura 4: Teste de soma na placa" do seu documento)*
+    ![Teste de soma na placa](Img/placa1.png)
 * **Subtração (com resultado negativo):** Teste realizado para verificar o funcionamento com números negativos.
-    * *(Sugestão: Você pode adicionar aqui a "Figura 5: Teste de subtração na placa" do seu documento)*
+   ![Teste de sub na placa](Img/placa2.png)
 * **Divisão:** Teste realizado com `8 / 2`. Resultado exibido: `04`.
-    * *(Sugestão: Você pode adicionar aqui a "Figura 6: Teste de divisão na placa" do seu documento)*
+    ![Teste de div na placa](Img/placa3.png)
 * **Multiplicação:** Teste realizado com `8 * 7`. Resultado exibido: `56`.
-    * *(Sugestão: Você pode adicionar aqui a "Figura 7: Teste de multiplicação na placa" do seu documento)*
+   ![Teste de mult na placa](Img/placa4.png)
 
 ---
 
-## 🏁 Conclusão
+##  Conclusão
 
 O projeto desenvolvido implementa com sucesso uma calculadora em VHDL, utilizando `packages` para modularização e displays de 7 segmentos para exibição dos resultados. A estrutura proposta permite realizar operações básicas como adição, subtração, multiplicação e divisão, garantindo uma interface clara e intuitiva para o usuário.
 
 ---
 
-## 🚀 Sugestões de Melhorias Futuras
+##  Sugestões de Melhorias Futuras
 
 * **Sinalização de Negativo com LED:** Em vez de usar um segmento do display para o sinal, utilizar um LED dedicado. Isso permitiria usar o último display de 7 segmentos para representar a casa da centena em resultados maiores que 99.
 * **Multiplexação de Switches:** Melhorar a multiplexação dos switches para reduzir o número de pinos utilizados na FPGA.
@@ -65,4 +65,4 @@ O projeto desenvolvido implementa com sucesso uma calculadora em VHDL, utilizand
 
 ---
 
-## 📂 Estrutura do Repositório (Exemplo)
+##  Estrutura do Repositório (Exemplo)
