@@ -41,13 +41,16 @@ A calculadora opera recebendo duas entradas numéricas e uma seleção de opera�
 O código VHDL foi compilado e programado na placa FPGA para a realização de testes e verificação do seu funcionamento. Os resultados obtidos foram satisfatórios, conforme detalhado abaixo:
 
 * **Adição:** Teste realizado com `8 + 3`. Resultado exibido: `11`.
-    ![Teste de soma na placa](Img/placa1.png)
+    <img src="Img/placa1.png" alt="Teste de soma na placa" width="400">
+
 * **Subtração (com resultado negativo):** Teste realizado para verificar o funcionamento com números negativos.
-   ![Teste de sub na placa](Img/placa2.png)
+    <img src="Img/placa2.png" alt="Teste de sub na placa" width="400">
+
 * **Divisão:** Teste realizado com `8 / 2`. Resultado exibido: `04`.
-    ![Teste de div na placa](Img/placa3.png)
+    <img src="Img/placa3.png" alt="Teste de div na placa" width="400">
+
 * **Multiplicação:** Teste realizado com `8 * 7`. Resultado exibido: `56`.
-   ![Teste de mult na placa](Img/placa4.png)
+    <img src="Img/placa4.png" alt="Teste de mult na placa" width="400">
 
 ---
 
